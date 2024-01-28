@@ -4,3 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     return HttpResponse('hello. this is the index view.')
+
+def sampleagain(request):
+    return HttpResponse('Another text.')
