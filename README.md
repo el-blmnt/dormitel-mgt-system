@@ -1,1 +1,0 @@
-# dormitel-mgt-system
