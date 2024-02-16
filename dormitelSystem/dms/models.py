@@ -1,17 +1,17 @@
 from django.db import models
 
 # Create your models here.
-class Lodger(models.Model):
+class Lodger(models.Model): 
     lodgerID = models.CharField(max_length = 50, unique = True, null=False)
     last_name = models.CharField(max_length = 100,null=False)
     first_name = models.CharField(max_length=50, null=False)
     contact_number = models.IntegerField()
     home_address = models.CharField(max_length = 100)
-    email_address = models.CharField(max_length = 254, null=False)
+    email_address = models.EmailField(null=False)
     username = models.CharField(max_length = 50)
     password = models.CharField(max_length = 50)
-    schedule_of_last_due = models.DateField() #look for the correct datatype of this field
-    schedule_of_next_payment = models.DateField() #look for the correct datatype of this field
+    schedule_of_last_due = models.DateField() 
+    schedule_of_next_payment = models.DateField() 
 
 class Rooms(models.Model):
     room_number = models.IntegerField(unique=True, null=False)
@@ -44,6 +44,7 @@ class Billing(models.Model):
 
 class TransientCheckIn(models.Model):
     lodgerID = models.IntegerField() #declare as foreign key to Lodger
+    
 
 
 
