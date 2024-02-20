@@ -1,3 +1,5 @@
+//bundle all javascript in one file
+
 const path = require("path");
 const webpack = require("webpack")
 

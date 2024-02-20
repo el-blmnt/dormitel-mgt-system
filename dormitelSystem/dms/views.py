@@ -13,8 +13,8 @@ class RoomView(generics.CreateAPIView):
 
 
 
-def index(request):
-    return HttpResponse('hello. this is the index view.')
+def index(request, *arg, **kwargs):
+    return render(request, 'frontend/index.html')
 
 def sampleagain(request):
     return HttpResponse('Another text.')

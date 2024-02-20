@@ -20,6 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dms/', include('dms.urls'))
+    path('dms/', include('dms.urls')),
+    path('react/', include('reactjsFE.urls'))
     
 ]
