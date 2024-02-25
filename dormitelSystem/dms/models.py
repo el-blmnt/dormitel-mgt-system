@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Lodger(models.Model): 
     lodgerID = models.CharField(max_length = 50, default="", unique = True, null=False)
