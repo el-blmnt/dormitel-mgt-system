@@ -1,4 +1,42 @@
-<p>header here</p>
+{% extends "base.html" %}
+
+{% block content%}
+    <body>
+        <header>
+            <h1> Rooms </h1>
+        </header>
+        
+        <main>
+
+            <div class = "row"> 
+                <div class="col"> 
+                    
+                </div>
+            </div>
+
+
+            
+            <ul>
+                {% for rooms in rooms %}
+                    <li> 
+                        {{ rooms.room_number }}
+                        {{ rooms.room_description }}
+                        {{ rooms.room_type }}
+                        Php {{ rooms.room_amount }}
+                        {{ rooms.room_status }}
+                        {{ rooms.no_of_beds_available }}
+
+                    </li>
+
+                {% endfor %}
+            </ul>
+
+        </main>
+        
+    </body>
+{% endblock  %} 
+
+{% comment %} <p>header here</p>
 
 <form action="" method="post" style="background-color: whitesmoke;">
     {% csrf_token %}
@@ -6,4 +44,4 @@
 
     <input type="button" value="Save">
 
-</form>
+</form> {% endcomment %}

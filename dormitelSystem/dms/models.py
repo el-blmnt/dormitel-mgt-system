@@ -47,6 +47,10 @@ class TransientCheckIn(models.Model):
     checkinDate = models.DateField(auto_now_add = True)
     checkinTime = models.TimeField()
 
+class room_gallery(models.Model):
+    room_number= models.IntegerField() #assign foreign key for rooms
+    room_image = models.ImageField()
+
 
 
 
