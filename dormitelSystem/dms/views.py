@@ -5,7 +5,7 @@ from dms.forms import manageRooms
 
 # Create your views here.
 def index(request):
-    return HttpResponse('hello. this is the index view.')
+    return render(request, "index.html")
 
 def sampleagain(request):
     return HttpResponse('Another text.')
