@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Lodger, Bed, Reservation, Billing, TransientCheckIn, room_gallery
+from .models import Room, Lodger, Bed, Reservation, Billing, TransientCheckIn
 
 # Register your models here.
 
@@ -19,6 +19,5 @@ admin.site.register(Bed)
 admin.site.register(Reservation)
 admin.site.register(Billing)
 admin.site.register(TransientCheckIn)
-admin.site.register(room_gallery, RoomGalleryAdmin)
 
 

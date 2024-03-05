@@ -25,7 +25,7 @@ class Lodger(models.Model):
     schedule_of_next_payment = models.DateField() 
 
 class Room(models.Model):
-    room_number = models.IntegerField(unique=True, default="", null=False)
+    room_number = models.IntegerField(primary_key=True, unique=True, default="", null=False)
     room_description = models.TextField(default="", null=False)
     room_type = models.CharField(max_length = 20, default="")
     room_amount = models.FloatField(null=False)
@@ -57,7 +57,3 @@ class TransientCheckIn(models.Model):
     lodgerID = models.ForeignKey(Lodger, on_delete=models.CASCADE) # foreign key to Lodger
     checkinDate = models.DateField(auto_now_add = True)
     checkinTime = models.TimeField()
-
-class room_gallery(models.Model):
-    room_number= models.ForeignKey(Room,on_delete = models.CASCADE) #foreign key for rooms
-    room_image = models.ImageField()
