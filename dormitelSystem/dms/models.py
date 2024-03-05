@@ -13,7 +13,7 @@ class Lodger(models.Model):
     schedule_of_last_due = models.DateField() 
     schedule_of_next_payment = models.DateField() 
 
-class Rooms(models.Model):
+class Room(models.Model):
     room_number = models.IntegerField(unique=True, default="", null=False)
     room_description = models.TextField(default="", null=False)
     room_type = models.CharField(max_length = 20, default="")
@@ -21,7 +21,7 @@ class Rooms(models.Model):
     room_status = models.CharField(max_length=20, null=False)
     no_of_beds_available = models.IntegerField(null=False)
 
-class Beds(models.Model):
+class Bed(models.Model):
     bed_no = models.IntegerField()
     room_number = models.IntegerField() #Assign as foreign key to the room number in rooms class
     bed_description = models.TextField()

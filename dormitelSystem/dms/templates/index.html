@@ -1,34 +1,17 @@
 {% extends "base.html" %}
 
-{%block content%}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>XYZ Dormitel</title>
-    </head>
-    <body>
-        <header>
-            <h1> XYZ Dormitel </h1>
+{%block content%} 
+        <body>
+          <header>
+            <center> 
+                {% load static %}
+                <img src="{% static 'Banner1.jpg' %}" alt="Banner" style="width: 500px;">
+            </center>    
         </header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Amenities</li>
-                <li>About Us</li>
-            </ul>
-        </nav>
-        <main>
-
-        </main>
-
-        <footer>
-            
-        </footer>
-        
-    </body>
+      
+          <main>
+          </main>
+  
+        </body>
     </html>
-
-{% endblock  %} 
+{% endblock  %}

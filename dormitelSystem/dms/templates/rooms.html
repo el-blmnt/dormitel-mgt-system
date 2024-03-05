@@ -3,6 +3,13 @@
 {% block content%}
     <body>
         <header>
+            <center> 
+                {% load static %}
+                <img src="{% static 'Banner1.jpg' %}" alt="Banner" style="width: 500px;">
+            </center>    
+        </header>
+
+        <main>
             <nav class="navbar bg-light">
                 <div class="container-fluid">
                   <a class="navbar-brand">Our Rooms</a>
@@ -12,9 +19,6 @@
                   </form>
                 </div>
               </nav>
-        </header>
-        
-        <main>
 
             <div class = "row"> 
                 {% for rooms in rooms %}

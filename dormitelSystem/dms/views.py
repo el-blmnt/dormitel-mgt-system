@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Rooms
+from .models import Room
 
 from dms.forms import manageRooms
 
 # Create your views here.
 def index(request):
     return render(request, "index.html")
+
+def signup(request):
+    return render(request, "signUp.html")
 
 def sampleagain(request):
     return HttpResponse('Another text.')
@@ -17,5 +20,6 @@ def sampleagain(request):
     return render(request, "rooms.html", context) """
 
 def rooms(request):
-    rooms = Rooms.objects.all() #to retrive all data in dtb
-    return render(request, "rooms.html", {'rooms': rooms}) # arg2: name of the template, arg3: data to be passed to arg2
+    rooms = Room.objects.all() #to retrive all data in dtb
+    return render(request, "rooms.html", {'room': rooms}) # arg2: name of the template, arg3: data to be passed to arg2
+
