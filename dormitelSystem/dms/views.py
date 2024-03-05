@@ -14,12 +14,13 @@ def signup(request):
 def sampleagain(request):
     return HttpResponse('Another text.')
 
-""" def manageroomsform(request):
+def manageRoom(request):
     form = manageRooms()
     context = {"form": form}
-    return render(request, "rooms.html", context) """
+    return render(request, "manageroom.html", context)
 
 def rooms(request):
     rooms = Room.objects.all() #to retrive all data in dtb
+   # rooms = Room.objects.get(id=pk) #to retrive specific data
     return render(request, "rooms.html", {'room': rooms}) # arg2: name of the template, arg3: data to be passed to arg2
 
