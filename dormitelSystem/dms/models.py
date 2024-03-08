@@ -31,6 +31,7 @@ class Room(models.Model):
     room_amount = models.FloatField(null=False)
     room_status = models.CharField(max_length=20, null=False)
     no_of_beds_available = models.IntegerField(null=False)
+    room_image = models.CharField(max_length = 255, default = "")
 
 class Bed(models.Model):
     bed_no = models.IntegerField()
